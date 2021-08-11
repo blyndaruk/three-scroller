@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Site title</title>
+
+    {% include './components/_page-head.html' %}
+</head>
+<body class="{{ body_class }}">
+    <div class="fluid-wrapper">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% include './components/_scripts.html' %}
+
+    <script src="js/main.js"></script>
+    {% block footer_scripts %}
+    {% endblock %}
+</body>
+</html>
