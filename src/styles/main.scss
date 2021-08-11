@@ -1,2 +1,8 @@
 @import 'components/_reset';
 @import 'components/_fonts';
+
+body {
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  background-color: #aec7c3;
+}

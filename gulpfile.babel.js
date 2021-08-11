@@ -1,5 +1,3 @@
-'use strict';
-
 import gulp from 'gulp';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -69,7 +67,7 @@ gulp.task('watch', function(done) {
     gulp.watch('./src/img/favicon/**/*', gulp.series('favicons'));
     gulp.watch('./src/js/**/*.js', gulp.series('js'));
     gulp.watch('./static/images/**/*.{jpg,png,jpeg,svg,gif}', gulp.series('copy'));
-    gulp.watch('./static/fonts/**/*.{ttf,eot,woff,woff2}', gulp.series('copy'));
+    gulp.watch('./static/fonts/**/*.{ttf,eot,woff,woff2,json}', gulp.series('copy'));
     gulp.watch('./static/lib/**/*', gulp.series('copy'));
 
     done();
@@ -122,7 +120,7 @@ gulp.task('copy:img', function() {
 
 gulp.task('copy:fonts', function() {
     return gulp
-    .src(['./static/fonts/**/*.{ttf,eot,woff,woff2}'])
+    .src(['./static/fonts/**/*.{ttf,eot,woff,woff2,json}'])
     .pipe(gulp.dest('./dist/fonts/'));
 });
 
